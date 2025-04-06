@@ -1,0 +1,123 @@
+// Sample data storage using arrays
+const patients = [
+    {
+        id: "P6660",
+        firstName: 'Yu Waddy',
+        lastName: 'Lwin',
+        email: 'yu@example.com',
+        password: '1234',
+        phone: '1234567890',
+        address: '123 Main St',
+        dob: '2004-09-01',
+        gender: 'Female',
+        bloodType: 'O+'
+    },
+    {
+        id: "P6661",
+        firstName: 'Khit',
+        lastName: 'Thiri',
+        email: 'khit@example.com',
+        password: '4321',
+        phone: '093454839',
+        address: '321 Main St',
+        dob: '2002-06-12',
+        gender: 'Female',
+        bloodType: 'A+'
+    },
+    {
+        id: "P6662",
+        firstName: 'Brii',
+        lastName: '',
+        email: 'brii@example.com',
+        password: '5678',
+        phone: '346457933',
+        address: '567 Main St',
+        dob: '2005-08-15',
+        gender: 'Female',
+        bloodType: 'B+'
+    }
+];
+
+const employees = [
+    {
+        id: "E1111",
+        firstName: 'Htet',
+        lastName: 'Yawai',
+        email: 'yawai@example.com',
+        password: '1234',
+        role: 'Doctor',
+        phone: '9876543210',
+        department: 'General Health'
+    },
+    {
+        id: "E1112",
+        firstName: 'Thinzar Hsu',
+        lastName: 'Hlaing',
+        email: 'thinzar@example.com',
+        password: '4321',
+        role: 'Admin',
+        phone: '9876543210',
+        department: 'Administration'
+    }
+];
+
+const appointments = [
+    {
+        id: 1,
+        patientId: "P6660",
+        employeeId: 1,
+        date: '2025-04-28',
+        time: '10:00',
+        reason: 'Regular Checkup',
+        status: 'Scheduled'
+    },
+    {
+        id: 2,
+        patientId: "P6661",
+        employeeId: 2,
+        date: '2025-04-15',
+        time: '11:00',
+        reason: 'Physical Exam',
+        status: 'Scheduled'
+    }
+];
+
+const medicalRecords = [
+    {
+        id: 1,
+        patientId: "P6660",
+        date: '2025-03-10',
+        diagnosis: 'Gastric ulcer',
+        treatment: 'Rest and hydration',
+        medications: 'Probiotics',
+        notes: 'Patient recovering well'
+    },
+    {
+        id: 2,
+        patientId: "P6661",
+        date: '2025-04-5',
+        diagnosis: 'High Blood Pressure',
+        treatment: 'Rest',
+        medications: 'Vasodilators',
+        notes: 'Patient recovering well'
+    }
+];
+
+const healthTips = [
+    {
+        id: 1,
+        title: 'Life Style Changes: ',
+        content: 'Enough Sleep, Eat smaller, Avoid Soda',
+        category: 'General Health'
+    }
+];
+
+
+
+module.exports = {
+    patients,
+    employees,
+    appointments,
+    medicalRecords,
+    healthTips,
+};

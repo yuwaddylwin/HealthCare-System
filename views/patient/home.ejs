@@ -1,0 +1,66 @@
+<section class="dashboard-home">
+    <h2>Welcome, <%= user.firstName %></h2>
+    
+    <div class="stats-cards">
+        <div class="card">
+            <div class="card-icon bg-primary">
+                <i class="fas fa-calendar"></i>
+            </div>
+            <div class="card-content">
+                <h3>Upcoming Appointments</h3>
+                <p><%= appointments.filter(a => a.status === 'Scheduled').length %></p>
+            </div>
+        </div>
+        
+        <div class="card">
+            <div class="card-icon bg-success">
+                <i class="fas fa-file-medical"></i>
+            </div>
+            <div class="card-content">
+                <h3>Medical Records</h3>
+                <p><%= records.length %></p>
+            </div>
+        </div>
+    </div>
+    
+    <div class="recent-appointments">
+        <h3>Recent Appointments</h3>
+        <% if (appointments.length > 0) { %>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Date</th>
+                        <th>Time</th>
+                        <th>Reason</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <% appointments.slice(0, 3).forEach(appointment => { %>
+                        <tr>
+                            <td><%= appointment.date %></td>
+                            <td><%= appointment.time %></td>
+                            <td><%= appointment.reason %></td>
+                            <td><span class="status-badge <%= appointment.status.toLowerCase() %>"><%= appointment.status %></span></td>
+                        </tr>
+                    <% }) %>
+                </tbody>
+            </table>
+        <% } else { %>
+            <p>No appointments found.</p>
+        <% } %>
+    </div>
+    
+    <div class="health-tips">
+        <h3>Health Tips</h3>
+        <div class="tips-grid">
+            <% tips.slice(0, 2).forEach(tip => { %>
+                <div class="tip-card">
+                    <h4><%= tip.title %></h4>
+                    <p><%= tip.content %></p>
+                    <span class="category"><%= tip.category %></span>
+                </div>
+            <% }) %>
+        </div>
+    </div>
+</section>

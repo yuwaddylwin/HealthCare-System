@@ -1,0 +1,68 @@
+{
+  "patients": [
+    {
+      "id": 1,
+      "firstName": "John",
+      "lastName": "Doe",
+      "email": "john@example.com",
+      "password": "password123",
+      "phone": "1234567890",
+      "address": "123 Main St",
+      "dob": "1980-01-01",
+      "gender": "Male",
+      "bloodType": "A+"
+    }
+  ],
+  "employees": [
+    {
+      "id": 1,
+      "firstName": "Admin",
+      "lastName": "User",
+      "email": "admin@example.com",
+      "password": "admin123",
+      "role": "admin",
+      "phone": "9876543210",
+      "department": "Administration"
+    }
+  ],
+  "appointments": [
+    {
+      "id": 1,
+      "patientId": 1,
+      "employeeId": 1,
+      "date": "2023-06-15",
+      "time": "10:00",
+      "reason": "Regular Checkup",
+      "status": "Scheduled"
+    }
+  ],
+  "medicalRecords": [
+    {
+      "id": 1,
+      "patientId": 1,
+      "date": "2023-05-10",
+      "diagnosis": "Common Cold",
+      "treatment": "Rest and hydration",
+      "medications": "None",
+      "notes": "Patient recovering well"
+    }
+  ],
+  "healthTips": [
+    {
+      "id": 1,
+      "title": "Stay Hydrated",
+      "content": "Drink at least 8 glasses of water daily to maintain good health.",
+      "category": "General Health"
+    }
+  ],
+  "financialReports": [
+    {
+      "id": 1,
+      "patientId": 1,
+      "date": "2023-05-10",
+      "amount": 150,
+      "description": "Consultation Fee",
+      "status": "Paid"
+    }
+  ]
+}

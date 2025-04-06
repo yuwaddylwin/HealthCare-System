@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include('../partials/head') %>
+    <title>Patient Dashboard</title>
+</head>
+<body>
+    <%- include('../partials/header') %>
+    
+    <main class="dashboard-container">
+        <div class="sidebar">
+            <div class="profile">
+                <div class="avatar">
+                    <i class="fas fa-user"></i>
+                </div>
+                <h3><%= user.firstName %> <%= user.lastName %></h3>
+                <p>Patient</p>
+            </div>
+            
+            <nav class="dashboard-nav">
+                <ul>
+                    <li><a href="/patient/dashboard" class="active"><i class="fas fa-home"></i> Home</a></li>
+                    <li><a href="/patient/medical-history"><i class="fas fa-file-medical"></i> Medical History</a></li>
+                    <li><a href="/patient/appointments"><i class="fas fa-calendar-check"></i> Appointments</a></li>
+                    <li><a href="/patient/health-tips"><i class="fas fa-heart"></i> Health Tips</a></li>
+                    <li><a href="/auth/logout"><i class="fas fa-sign-out-alt"></i> Logout</a></li>
+                </ul>
+            </nav>
+        </div>
+        
+        <div class="main-content">
+            <%- include('home') %>
+        </div>
+    </main>
+    
+    <%- include('../partials/footer') %>
+</body>
+</html>

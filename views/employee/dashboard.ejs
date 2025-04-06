@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include('../partials/head') %>
+    <title>Employee Dashboard</title>
+</head>
+<body>
+    <%- include('../partials/header') %>
+    
+    <main class="dashboard-container">
+        <div class="sidebar">
+            <div class="profile">
+                <div class="avatar">
+                    <i class="fas fa-user-md"></i>
+                </div>
+                <h3><%= user.firstName %> <%= user.lastName %></h3>
+                <p><%= user.role.charAt(0).toUpperCase() + user.role.slice(1) %></p>
+            </div>
+            
+            <nav class="dashboard-nav">
+                <ul>
+                    <li><a href="/employee/dashboard" class="active"><i class="fas fa-home"></i> Home</a></li>
+                    <li><a href="/employee/manage-patients"><i class="fas fa-users"></i> Manage Patients</a></li>
+                    <li><a href="/employee/manage-appointments"><i class="fas fa-calendar-alt"></i> Manage Appointments</a></li>
+                    <li><a href="/auth/logout"><i class="fas fa-sign-out-alt"></i> Logout</a></li>
+                </ul>
+            </nav>
+        </div>
+        
+        <div class="main-content">
+            <%- include('home', {patients: patients, user: user}) %>
+        </div>
+    </main>
+    
+    <%- include('../partials/footer') %>
+</body>
+</html>
