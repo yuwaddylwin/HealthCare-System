@@ -26,7 +26,7 @@ router.get('/dashboard', (req, res) => {
 router.get('/home', (req, res) => {
     res.render('employee/home', { 
         user: req.session.user,
-        patients: patients // Add this line
+        patients: patients 
     });
 });
 
@@ -44,7 +44,7 @@ router.post('/manage-patients', (req, res) => {
         firstName,
         lastName,
         email,
-        password: 'default123', // Default password
+        password: 'default123', 
         phone,
         address,
         dob,

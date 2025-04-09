@@ -50,7 +50,7 @@ router.post('/appointments', (req, res) => {
     const newAppointment = {
         id: appointments.length + 1,
         patientId: req.session.user.id,
-        employeeId: 1, // Default to first employee for simplicity
+        employeeId: 1, 
         date,
         time,
         reason,

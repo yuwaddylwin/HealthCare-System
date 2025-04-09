@@ -14,7 +14,7 @@ app.use(session({
     secret: 'healthcare_secret',
     resave: false,
     saveUninitialized: true,
-    cookie: { secure: false } // set to true if using HTTPS
+    cookie: { secure: false } 
 }));
 app.use(flash());
 

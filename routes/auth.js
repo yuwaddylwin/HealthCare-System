@@ -30,7 +30,7 @@ router.post('/login', (req, res) => {
 });
 
 
-// Logout Handle
+// Logout 
 router.get('/logout', (req, res) => {
     req.session.destroy();
     res.redirect('/');

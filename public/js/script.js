@@ -1,6 +1,5 @@
-// You can add any client-side JavaScript functionality here
 document.addEventListener('DOMContentLoaded', function() {
-    // Mobile menu toggle (if needed)
+    
     const mobileMenuBtn = document.getElementById('mobileMenuBtn');
     const mainNav = document.querySelector('.main-nav ul');
     
@@ -10,7 +9,7 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
     
-    // Form validation examples
+    // Form validation 
     const forms = document.querySelectorAll('form');
     forms.forEach(form => {
         form.addEventListener('submit', function(e) {
